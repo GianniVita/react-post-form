@@ -54,18 +54,37 @@ const name = e.target.name
     
       <div className='container mt-4'>
         <form onSubmit={handleSubmit}>
+        <label for="author">Autore:</label>
           <input 
           type="text"
           name = "author"
           value = {formData.author}
           onChange = {handleFormData}
           />
+          <label for="title">Titolo:</label>
          <input 
-         type="text" />
+          type = "text" 
           name = "title"
+          value = {formData.title}
+          onChange = {handleFormData}
+          />
+          <label for="body">Testo del Post:</label>
+          <input
+            type="text"
+            name="body"
+            value={formData.body}
+            onChange={handleFormData}
+          />
+          <input
+            type="check box"
+            name="public"
+            value={formData.public}
+            onChange={handleFormData}
+          />
+
 
           
-        <button type='submit'>Conferma</button>
+        <button type='submit'>Crea Post</button>
         </form>
 
       </div>
