@@ -1,6 +1,6 @@
 import { useState } from 'react'
-
 import axios from 'axios';
+
 
 const endpoint = 'https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts';
 
@@ -53,39 +53,56 @@ const name = e.target.name
     <>
     
       <div className='container mt-4'>
-        <form onSubmit={handleSubmit}>
-        <label for="author">Autore:</label>
-          <input 
-          type="text"
-          name = "author"
-          value = {formData.author}
-          onChange = {handleFormData}
-          />
-          <label for="title">Titolo:</label>
-         <input 
-          type = "text" 
-          name = "title"
-          value = {formData.title}
-          onChange = {handleFormData}
-          />
-          <label for="body">Testo del Post:</label>
-          <input
-            type="text"
-            name="body"
-            value={formData.body}
-            onChange={handleFormData}
-          />
-          <input
-            type="check box"
-            name="public"
-            value={formData.public}
-            onChange={handleFormData}
-          />
+        <div className='row justify-content-center'>
+          <div className='col-md-8 col-lg-6'>
+
+            <form className="mt-5 rounded" onSubmit={handleSubmit}>
+            <label for="author">Autore:</label>
+              <input 
+              className='form-control'
+              type="text"
+              name = "author"
+              value = {formData.author}
+              onChange = {handleFormData}
+              />
+              <label for="title">Titolo:</label>
+            <input 
+              className='form-control'
+              type = "text" 
+              name = "title"
+              value = {formData.title}
+              onChange = {handleFormData}
+              />
+              <label for="body">Testo del Post:</label>
+              <input
+                className='form-control'
+                type="text"
+                name="body"
+                value={formData.body}
+                onChange={handleFormData}
+              />
+              <div className='form-check mb-4'>
+
+              <input
+                className='form-check-input'
+                type="check box"
+                name="public"
+                value={formData.public}
+                onChange={handleFormData}
+              />
+              <label className='form-check-lable'>Rendi Pubblico(Spunta per pubblicare subito)<label/>
+              </div>
 
 
-          
-        <button type='submit'>Crea Post</button>
-        </form>
+
+            <div>
+            <button type='submit' className='btn btn-success w-100'>Crea Post</button>
+              
+            </div>  
+            </form>
+          </div>
+
+        </div>
 
       </div>
 
