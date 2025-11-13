@@ -54,13 +54,15 @@ const name = e.target.name
     
       <div className='container mt-4'>
         <form onSubmit={handleSubmit}>
-          <input type="text"
+          <input 
+          type="text"
           name = "author"
           value = {formData.author}
           onChange = {handleFormData}
           />
-         
-
+         <input 
+         type="text" />
+          name = ""
           
         <button type='submit'>Conferma</button>
         </form>
