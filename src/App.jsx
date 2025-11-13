@@ -62,7 +62,8 @@ const name = e.target.name
           />
          <input 
          type="text" />
-          name = ""
+          name = "title"
+
           
         <button type='submit'>Conferma</button>
         </form>
