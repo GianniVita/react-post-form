@@ -25,31 +25,37 @@ const [formData, setFormData]= useState({
 
 
 
-function App() {
+function handleFormData(e) {
+  const value = 
+    e.target.public === "checkbox" ? e.target.checked : e.target.value;
+    
+    setFormData({
+      ...formData, [e.target.name] : value,
+
+    });
   
   
   
-  
-  
-  
-  
-  
-  
-  
+  }
   
   return (
     <>
-     
+    <div className='container mt-4'>
 
+    name= "author"
+    checked={formData.author}
+    onChange={handleFormaData} 
+    id=""   
+    
 
-
-
-
+    </div>
+    
+    
+    
 
 
     </>
   )
-}
 
 
 export default App
